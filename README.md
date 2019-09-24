@@ -1,2 +1,2 @@
 # yong-movies
-movie application using react-native 
+ios/android movie application using react-native 
