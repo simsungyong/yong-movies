@@ -6,7 +6,6 @@ import *as Font from 'expo-font';
 import MainNavigation from './navigation/MainNavigation';
 
 
-
 export default class App extends React.Component {
 
   state = {
