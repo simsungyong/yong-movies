@@ -12,21 +12,31 @@ export default class extends React.Component{   //container 마운트될따 api 
     };
 
     async componentDidMount(){ //컴포넌트가 마운트한 다음~
+        let upcoming, popular, nowPlaying, error;  //값이 변하는 변수 let
         try{
-            const upcoming = await movies.getUpcoming();
-            const popular = await movies.getPopular();
-            const nowPlaying = await movies.getNowPlyaing();
-            console.log(upcoming, popular, nowPlaying);
-        }catch(error){
-            console.log(error);
-            this.setState({error:"Can't get Movies"});
+            ({data:{results: upcoming}} = await movies.getUpcoming());
+            ({data:{results: popular}} = await movies.getPopular());
+            ({data:{results: nowPlaying}} = await movies.getNowPlyaing());   //let 변수 업데이트
+            //console.log(upcoming, popular, nowPlaying);
+        }catch{
+            error:"Can't get Movies";   //let변수 error 업데이트
         }finally{
-            this.setState({loading:false});
+            this.setState({
+                loading:false,
+                upcoming,
+                popular,
+                nowPlaying,
+                error});
         }
     }
 
     render(){
-        const { loading} = this.state
-        return <MoviesPresenter loading={loading} />
+        const { loading, upcoming, popular, nowPlaying } = this.state     
+        console.log(this.state);                
+        return <MoviesPresenter 
+            loading={loading} 
+            upcoming={upcoming} 
+            popular={popular} 
+            nowPlaying={nowPlaying} />                    //4개의 props 건네주기!!
     }
 }
