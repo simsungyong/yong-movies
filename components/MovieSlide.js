@@ -34,7 +34,7 @@ const Title = styled.Text`
     color : ${TINT_COLOR};
     font-size:14px;
     font-weight:600;
-        `; 
+    `; 
 
 
 const Overview = styled.Text`
