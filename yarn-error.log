@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/yong/.yarn/bin/yarn.js add raect-navigation-stack
+  /usr/local/bin/node /Users/yong/.yarn/bin/yarn.js add axios@0.18.0
 
 PATH: 
   /Users/yong/.yarn/bin:/Users/yong/.config/yarn/global/node_modules/.bin:/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yong/.yarn/bin:/Users/yong/.config/yarn/global/node_modules/.bin:/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/yong/Library/Android/sdk/platform-tools:/Users/yong/Library/Android/sdk/platform-tools
@@ -14,17 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/raect-navigation-stack: Not found
-      at Request.params.callback [as _callback] (/Users/yong/.yarn/lib/cli.js:66830:18)
-      at Request.self.callback (/Users/yong/.yarn/lib/cli.js:140464:22)
-      at Request.emit (events.js:198:13)
-      at Request.<anonymous> (/Users/yong/.yarn/lib/cli.js:141436:10)
-      at Request.emit (events.js:198:13)
-      at IncomingMessage.<anonymous> (/Users/yong/.yarn/lib/cli.js:141358:12)
-      at Object.onceWrapper (events.js:286:20)
-      at IncomingMessage.emit (events.js:203:15)
-      at endReadableNT (_stream_readable.js:1145:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
+  Error: EACCES: permission denied, mkdir '/Users/yong/yong-movies/node_modules/@react-native-community/cli/node_modules/jsonfile'
 
 npm manifest: 
   {
@@ -38,7 +28,6 @@ npm manifest:
     },
     "dependencies": {
       "@expo/vector-icons": "^10.0.5",
-      "axios": "^0.19.0",
       "expo": "^35.0.0",
       "expo-font": "~7.0.0",
       "prop-types": "^15.7.2",
@@ -51,6 +40,7 @@ npm manifest:
       "react-native-tabs": "^1.0.9",
       "react-native-web": "^0.11.7",
       "react-navigation": "^4.0.8",
+      "react-navigation-stack": "^1.9.0",
       "react-navigation-tabs": "^2.5.5",
       "styled-components": "^4.4.0"
     },
@@ -4504,6 +4494,13 @@ Lockfile:
       ws "^1.1.5"
       xmldoc "^0.4.0"
       yargs "^9.0.0"
+  
+  react-navigation-stack@^1.9.0:
+    version "1.9.0"
+    resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-1.9.0.tgz#bc81dc47b82dda156d3831755c379ee7356c8d43"
+    integrity sha512-GuLisx7IsUNxW4e60qdFX3v/tO9y7mLfaD58Lpjrz8mqchxsKtWh9PZe9lPLQQZrJuC9bHuGMb9zLuluGiFXaQ==
+    dependencies:
+      prop-types "^15.7.2"
   
   react-navigation-tabs@^2.5.5:
     version "2.5.5"

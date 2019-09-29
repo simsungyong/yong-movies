@@ -3,7 +3,7 @@ import axios from 'axios';
 const api = axios.create({
     baseURL:"https://api.themoviedb.org/3/",   //공통유알엘
     params:{
-        api_key: '10923b261ba94d897ac6b81148314a3f',//5092ed35930ff6d8c5ad4cc7f2b8a4c6
+        api_key: '5092ed35930ff6d8c5ad4cc7f2b8a4c6',
         language: 'ko-KR'
     }
 });
