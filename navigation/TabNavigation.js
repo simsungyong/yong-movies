@@ -5,7 +5,7 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import MoviesScreen from '../screens/Movies/MoviesContainer';
 import TVScreen from '../screens/TV/TVContainer';
 import SearchScreen from '../screens/Search';
-import {BG_COLOR} from '../constants/Colors';
+import {BG_COLOR, GREY_COLOR} from '../constants/Colors';
 import TabBarIcon from '../components/TabBarIcon';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createStack} from './config';
@@ -43,7 +43,7 @@ const TabNavigation = createBottomTabNavigator({//RouteConfigs, TabNavigatorConf
         tabBarOptions:{
             showLabel:false,
             style:{
-                backgroundColor:BG_COLOR
+                backgroundColor: BG_COLOR
             }
         }
 
