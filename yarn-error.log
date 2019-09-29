@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/yong/.yarn/bin/yarn.js add axios@0.18.0
+  /usr/local/bin/node /Users/yong/.yarn/bin/yarn.js add react-native-swiper
 
 PATH: 
   /Users/yong/.yarn/bin:/Users/yong/.config/yarn/global/node_modules/.bin:/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/yong/.yarn/bin:/Users/yong/.config/yarn/global/node_modules/.bin:/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/yong/Library/Android/sdk/platform-tools:/Users/yong/Library/Android/sdk/platform-tools
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/Users/yong/yong-movies/node_modules/@react-native-community/cli/node_modules/jsonfile'
+  Error: EACCES: permission denied, mkdir '/Users/yong/yong-movies/node_modules/@react-native-community/cli/node_modules/metro-react-native-babel-transformer'
 
 npm manifest: 
   {
@@ -28,6 +28,7 @@ npm manifest:
     },
     "dependencies": {
       "@expo/vector-icons": "^10.0.5",
+      "axios": "^0.18.1",
       "expo": "^35.0.0",
       "expo-font": "~7.0.0",
       "prop-types": "^15.7.2",
