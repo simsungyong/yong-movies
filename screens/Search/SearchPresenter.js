@@ -12,7 +12,7 @@ const Container = styled.View`
 `;
 
 const Input = styled.TextInput`
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.4);
     width: ${Layout.width /1.6 };
     border-radius: 20px;
     padding : 10px;

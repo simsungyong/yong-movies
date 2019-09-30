@@ -40,7 +40,7 @@ const TabNavigation = createBottomTabNavigator({//RouteConfigs, TabNavigatorConf
         }
     },
     {   
-        initialRouteName: "Search", //어플첫화면
+        initialRouteName: "Movie", //어플첫화면
         tabBarOptions:{
             showLabel:false,
             style:{
