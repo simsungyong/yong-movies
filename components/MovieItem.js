@@ -20,7 +20,6 @@ const Title = styled.Text`
 const HContainer = styled.View`
     margin-bottom:20px;
     flex-direction: row;
-    align-items: center;
     
     `;
 
@@ -52,7 +51,7 @@ const MovieItem = ({
                 <MovieRating votes={voteAvg}/>
                 {overview ? (
                 <Overview>
-                    {overview.length > 120 ? `${overview.substring(0,125)}...` : overview}
+                    {overview.length > 150 ? `${overview.substring(0,146)}...` : overview}
                 </Overview>) : null}
             </Column>
         </HContainer>

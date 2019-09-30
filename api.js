@@ -17,7 +17,7 @@ export const movies={
             append_to_response: 'videos'
         }
     }),
-    searchMovies: term => api.get('search/movie', {  //여기서 파라미터는 url
+    searchMovies:  term => api.get('search/movie', {  //여기서 파라미터는 url
         params:{
             query: encodeURIComponent(term)  //url 인코딩       스트링을호 알게끔
         }

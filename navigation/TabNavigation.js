@@ -4,7 +4,7 @@ import {Platform,View,Text} from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import MoviesScreen from '../screens/Movies/MoviesContainer';
 import TVScreen from '../screens/TV/TVContainer';
-import SearchScreen from '../screens/Search';
+import SearchScreen from '../screens/Search/SearchContainer';
 import {BG_COLOR, GREY_COLOR} from '../constants/Colors';
 import TabBarIcon from '../components/TabBarIcon';
 import {createStackNavigator} from 'react-navigation-stack';
@@ -39,7 +39,8 @@ const TabNavigation = createBottomTabNavigator({//RouteConfigs, TabNavigatorConf
         }
         }
     },
-    {
+    {   
+        initialRouteName: "Search", //어플첫화면
         tabBarOptions:{
             showLabel:false,
             style:{
