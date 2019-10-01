@@ -30,7 +30,7 @@ export const tv={
     getAiringThisWeek: () => api.get('tv/on_the_air'),
     getPopular: () => api.get('tv/popular'),
     getAiringToday:() => api.get('tv/airing_today'),
-    getShow : ()=> api.get(`tv/${id}`, {
+    getShow : id => api.get(`tv/${id}`, {
         params:{
             append_to_response: 'videos'
         }

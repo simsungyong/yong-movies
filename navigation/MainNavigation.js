@@ -1,7 +1,7 @@
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import TabNavigation from './TabNavigation'; //navigation
-import DetailScreen from '../screens/Detail';  //screen
+import DetailScreen from '../screens/Detail/index';  //screen
 import { headerStyles } from './config';
 
 

@@ -23,7 +23,8 @@ export default class extends React.Component{
                 ({
                 data:{results: movieResults}}
                 = await movies.searchMovies(searchTerm));
-                ({data:{results: tvResults}}=await tv.searchShow(searchTerm));
+                ({data:{results: tvResults}}
+                =await tv.searchShow(searchTerm));
             } catch {
                 error:"Can't search"
             }finally{

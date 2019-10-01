@@ -18,6 +18,7 @@ const TVPresenter = ({loading,popular, airingToday, airingThisWeek}) =>
         .filter(tv=>tv.poster_path !== null)
         .map(tv=>(
         <MovieItem
+            isMovie={false}
             key={tv.id}
             id={tv.id}
             posterPhoto={tv.poster_path}
@@ -32,6 +33,7 @@ const TVPresenter = ({loading,popular, airingToday, airingThisWeek}) =>
         .map(tv=>(
         <MovieItem
             key={tv.id}
+            isMovie={false}
             id={tv.id}
             posterPhoto={tv.poster_path}
             title={tv.name}
@@ -44,6 +46,7 @@ const TVPresenter = ({loading,popular, airingToday, airingThisWeek}) =>
         .filter(tv=>tv.poster_path !== null)
         .map(tv=>(
         <MovieItem
+            isMovie={false}
             key={tv.id}
             id={tv.id}
             posterPhoto={tv.poster_path}

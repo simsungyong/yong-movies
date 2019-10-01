@@ -7,6 +7,7 @@ import makePhotoUrl from '../utils/makePhotoUrl';
 import MoviePoster from './MoviePoster';
 import { TINT_COLOR, GREY_COLOR } from '../constants/Colors';
 import MovieRating from './MovieRating';
+import {withNavigation} from 'react-navigation';
 
 const Container = styled.View`
     flex:1;
@@ -65,7 +66,9 @@ const MovieSlide = ({
     backgroundPhoto,
     title,
     voteAvg,
-    overview}) => <Container>
+    id,
+    overview,
+    navigation}) => <Container>
         <BgImage source={{uri:makePhotoUrl(backgroundPhoto)}}></BgImage>
         <Content>
             <MoviePoster path={posterPhoto}/>
@@ -76,7 +79,19 @@ const MovieSlide = ({
                     <Overview>
                     {overview.length > 120 ? `${overview.substring(0,125)}...` : overview}
                 </Overview>): null} 
-                <BtnContainer><BtnText>More details</BtnText></BtnContainer>
+                <BtnContainer onPress={()=>navigation.navigate({
+                    routeName:"Detail",
+                    params:{
+                        isMovie:true, 
+                        id,
+                        posterPhoto,
+                        backgroundPhoto,
+                        title,
+                        voteAvg,
+                        overview}})}
+                    >
+                    <BtnText>More details</BtnText>
+                </BtnContainer>
             </Column>
         </Content>
     </Container>;  //path를 그냥 주면안됨 경로를 처음부터 붙여야됨
@@ -91,4 +106,4 @@ MovieSlide.propTypes={
 
 }
 
-export default MovieSlide;
+export default withNavigation(MovieSlide);

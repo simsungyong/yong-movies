@@ -6,6 +6,8 @@ import Layout from '../../constants/Layout'
 import Loader from '../../components/Loader';
 import Section from '../../components/Section';
 import MovieItem from '../../components/MovieItem';
+
+
 const Container = styled.View`
     background-color: ${BG_COLOR};
     flex:1;
@@ -74,6 +76,7 @@ const SearchPresenter=({
                 .filter(tv=>tv.poster_path !== null)
                 .map(tv=>(
                     <MovieItem
+                        isMovie={false}
                         key={tv.id}
                         id={tv.id}
                         posterPhoto={tv.poster_path}
