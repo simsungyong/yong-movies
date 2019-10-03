@@ -4,7 +4,7 @@ import {Platform,View,Text} from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import MoviesScreen from '../screens/Movies';
 import TVScreen from '../screens/TV';
-import SearchScreen from '../screens/Search';
+import SearchScreen from '../screens/Search';   //node js가 자동적으로 index.js를 먼저 찾는다.!!!
 import {BG_COLOR, GREY_COLOR} from '../constants/Colors';
 import TabBarIcon from '../components/TabBarIcon';
 import {createStackNavigator} from 'react-navigation-stack';
