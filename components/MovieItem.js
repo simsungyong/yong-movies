@@ -48,7 +48,8 @@ const MovieItem = ({
     overview,
     isMovie = true,
     navigation }) =>(
-
+        //touchablewithoutfeedback은 눌렀을때 투명해지는효과 없는 버튼
+        //touchableOpacity 버튼은 눌렷을때 눌려지는 효과 있는 버튼.
     <TouchableWithoutFeedback onPress={()=>navigation.navigate({routeName:"Detail", params:{
         isMovie,
         id,
