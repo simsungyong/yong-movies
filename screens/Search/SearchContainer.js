@@ -12,7 +12,7 @@ export default class extends React.Component{
     };
 
 
-    onSubmitEditing=async()=>{
+    onSubmitEditing=async()=>{  //submit 버튼 눌렷을때 콜백됨
         const {searchTerm } = this.state;
         if(searchTerm !== ""){
             let loading, movieResults, tvResults, error;

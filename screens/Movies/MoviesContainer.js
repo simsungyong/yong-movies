@@ -14,7 +14,7 @@ export default class extends React.Component{   //container 마운트될따 api 
     async componentDidMount(){ //컴포넌트가 마운트한 다음~
         let upcoming, popular, nowPlaying, error;  //값이 변하는 변수 let
         try{
-            ({data:{results: upcoming}} = await movies.getUpcoming());
+            ({data:{results: upcoming}} = await movies.getUpcoming());  //axios 연결할때 data: 해줘야됨.
             ({data:{results: popular}} = await movies.getPopular());
             ({data:{results: nowPlaying}} = await movies.getNowPlyaing());   //let 변수 업데이트
             //console.log(upcoming, popular, nowPlaying);
@@ -26,7 +26,7 @@ export default class extends React.Component{   //container 마운트될따 api 
                 upcoming,
                 popular,
                 nowPlaying,
-                error});
+                error});  //componentdidMount에서 setState하면 render가 두번 호출된다. 하지만 사용자는 중간과정못봄. 하지만 성능문제가 떨어질수도잇음.!
         }
     }
 

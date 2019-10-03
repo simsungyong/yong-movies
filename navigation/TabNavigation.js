@@ -2,9 +2,9 @@ import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {Platform,View,Text} from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import MoviesScreen from '../screens/Movies/MoviesContainer';
-import TVScreen from '../screens/TV/TVContainer';
-import SearchScreen from '../screens/Search/SearchContainer';
+import MoviesScreen from '../screens/Movies';
+import TVScreen from '../screens/TV';
+import SearchScreen from '../screens/Search';
 import {BG_COLOR, GREY_COLOR} from '../constants/Colors';
 import TabBarIcon from '../components/TabBarIcon';
 import {createStackNavigator} from 'react-navigation-stack';
@@ -15,7 +15,7 @@ import {createStack} from './config';
 
 const TabNavigation = createBottomTabNavigator({//RouteConfigs, TabNavigatorConfig 두가지 인자를 파라미터로
     Movie:{
-        screen: createStack(MoviesScreen, 'Movie'), //createstack 메서도는 config.js파일에 해놈.
+        screen: createStack(MoviesScreen, 'Movie'), //createstack 메서도는 config.js파일에 해놈. 
         navigationOptions:{
             tabBarIcon:({focused}) => (
                 <TabBarIcon focused={focused} name={Platform.OS==='ios'? 'ios-film' : 'md-film'}/>
@@ -41,7 +41,7 @@ const TabNavigation = createBottomTabNavigator({//RouteConfigs, TabNavigatorConf
     },
     {   
         initialRouteName: "Movie", //어플첫화면
-        tabBarOptions:{
+        tabBarOptions:{//createbottomtabnavigator 의 config
             showLabel:false,
             style:{
                 backgroundColor: BG_COLOR

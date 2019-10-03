@@ -14,11 +14,11 @@ export default class extends React.Component{ //class component는 static method
         };
     };
 
-    constructor(props){
+    constructor(props){//navigaitons에 state잇음
         super(props);
         const {
             navigation: {
-                state: {
+                state: {//props는 변경안되니까 state로 바꿔서 세팅
                     params: {
                     isMovie,
                     posterPhoto,
@@ -42,7 +42,7 @@ export default class extends React.Component{ //class component는 static method
     
     async componentDidMount(){
         const {isMovie,id} = this.state;
-        let error, genres,overview, status, date, backgroundPhoto;
+        let error, genres,overview, status, date, backgroundPhoto;//리렌더링시간줄이려고
         try {
             if(isMovie){
                 ({data: {genres, overview, status, release_date: date, backdrop_path:backgroundPhoto
@@ -54,7 +54,7 @@ export default class extends React.Component{ //class component는 static method
         } catch (error) {
             
         }finally{
-            this.setState({loading:false, genres, overview, status, date, backgroundPhoto});
+            this.setState({loading:false, genres, overview, status, date, backgroundPhoto});//여기서한번만 리렌더링
         }
     }
 

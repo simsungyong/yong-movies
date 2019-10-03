@@ -13,10 +13,11 @@ const Container = styled.ScrollView`
 
 const MoviesPresenter = ({loading, upcoming, popular, nowPlaying}) => 
     loading ? (
-    <Loader />
+        <Loader />
     ) : (
     <Container>
         {nowPlaying ? <MovieSlider movies={nowPlaying} /> : null }
+
         {upcoming ? (
         <Section title='Upcoming Movies' >{upcoming
         .filter(movie=>movie.poster_path !== null)

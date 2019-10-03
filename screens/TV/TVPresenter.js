@@ -27,6 +27,7 @@ const TVPresenter = ({loading,popular, airingToday, airingThisWeek}) =>
             />
             ))}
         </Section>) : null}
+        
         {airingThisWeek ? (<Section title='Airing this Week'>
         {airingThisWeek
         .filter(tv=>tv.poster_path !== null)

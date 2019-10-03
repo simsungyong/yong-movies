@@ -39,7 +39,7 @@ const SearchPresenter=({
     searchTerm,
     movieResults,
     onSubmitEditing,  //서치버튼눌렀을때 넘겨주는함수
-    handleSearchUpdate}) =>(
+    handleSearchUpdate}) =>(//onSubmitEditing , onchangeText ==> call back function
     <Container>
         <InputContainer>
             <Input 

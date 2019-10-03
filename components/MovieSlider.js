@@ -16,11 +16,11 @@ const Text = styled.Text``;
 
 const MovieSlider =({movies})=> //showsPagination은 화살표 유무, autoplay 자동넘김 기본값 2.5초
     movies ? (<Swiper 
-        showsPagination={false} 
-        autoplay={true}
-        style={{height:SWIPER_HEIGHT}}
-        autoplayTimeout={3} > 
-        {movies
+            showsPagination={false} 
+            autoplay={true}
+            style={{height:SWIPER_HEIGHT}}
+            autoplayTimeout={3} > 
+            {movies
             .filter(movie=> movie.backdrop_path !== null)
             .map(movie=>(
             <View key={movie.id}>

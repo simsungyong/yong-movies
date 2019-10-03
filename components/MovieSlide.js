@@ -79,7 +79,7 @@ const MovieSlide = ({
                     <Overview>
                     {overview.length > 120 ? `${overview.substring(0,125)}...` : overview}
                 </Overview>): null} 
-                <BtnContainer onPress={()=>navigation.navigate({
+                <BtnContainer onPress={()=>navigation.navigate({//navigation.navigate({ routeName, params, action, key })
                     routeName:"Detail",
                     params:{
                         isMovie:true, 
