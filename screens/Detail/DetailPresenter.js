@@ -119,6 +119,7 @@ const DetailPresenter = ({
                     <ContentValue>{date}</ContentValue>
                 </DataContainer>
                 ) : null}
+                
                 {loading ? <Loader /> : null}
         </MainContent>
     </Container>);

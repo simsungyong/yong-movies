@@ -68,7 +68,8 @@ const MovieSlide = ({
     voteAvg,
     id,
     overview,
-    navigation}) => <Container>
+    navigation}) => 
+    <Container>
         <BgImage source={{uri:makePhotoUrl(backgroundPhoto)}}></BgImage>
         <Content>
             <MoviePoster path={posterPhoto}/>

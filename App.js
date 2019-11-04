@@ -9,8 +9,9 @@ import MainNavigation from './navigation/MainNavigation';
 export default class App extends React.Component {
 
   state = {
-    loaded : false //state기본값은 false
+    loaded : false,  //state기본값은 false
   };
+
   handleError = (error) => console.log(error); 
   handleLoaded = () =>this.setState({loaded:true}); 
 

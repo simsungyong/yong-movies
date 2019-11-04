@@ -10,7 +10,7 @@ export default class extends React.Component{ //class component는 static method
     static navigationOptions = ({navigation})=>{
         //console.log(navigation.getParam('isMovie'));
         return{//navigation options은 항상 props들ㅇ이 같이 옴!
-        title: navigation.getParam('title')
+            title: navigation.getParam('title')
         };
     };
 

@@ -23,6 +23,7 @@ export default class extends React.Component{
                 ({
                 data:{results: movieResults}}
                 = await movies.searchMovies(searchTerm));
+                
                 ({data:{results: tvResults}}
                 =await tv.searchShow(searchTerm));
             } catch {
@@ -38,8 +39,6 @@ export default class extends React.Component{
             
         }
     }
-    
-
     handleSearchUpdate = text => {// 검색어인 searchterm계속 업데이트 하는 함수! 검색어가 계속 변하니까~form을 다룰줄알아야함
         this.setState({
             searchTerm:text
